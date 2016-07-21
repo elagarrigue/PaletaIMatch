@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.blacktobacco.paletaimatch.VoteActivityFragment"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:padding="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/topbar"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/view_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/silencio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/topBar"
+        android:layout_centerInParent="true"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pregunta"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/green_voteL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/pregunta"
+        android:layout_centerInParent="true"
+        android:paddingTop="25dp"
+        android:paddingRight="45dp"
+        android:paddingLeft="45dp">
+
+        <ImageView
+            android:id="@+id/green_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/green_btn"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orange_voteL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/green_voteL"
+        android:layout_centerInParent="true"
+        android:paddingTop="28dp"
+        android:paddingRight="45dp"
+        android:paddingLeft="45dp">
+
+        <ImageView
+            android:id="@+id/orange_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/orange_btn"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/orange_voteL"
+        android:layout_centerInParent="true"
+        android:paddingTop="35dp"
+        android:paddingRight="43dp"
+        android:paddingLeft="43dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/separador"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_rules"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/separador"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="22dp"
+        android:paddingLeft="43dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/faltas_dbtn"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_links"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@id/separador"
+        android:layout_alignParentRight="true"
+        android:paddingTop="22dp"
+        android:paddingRight="43dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/links_dbtn"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/color_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="gone" android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout>

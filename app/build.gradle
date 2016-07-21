@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+   defaultConfig {
+        applicationId "com.blacktobacco.paletaimatch"
+        minSdkVersion 8
+        targetSdkVersion 22
+        versionCode 3
+        versionName "iMatch_1.0.1"
+    }
+    signingConfigs {
+        release {
+            storeFile file("matchreleasekey.keystore")
+            storePassword "maru.."
+            keyAlias "matchreleasekey"
+            keyPassword "maru.."
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(
+                    output.outputFile.parent,
+                    output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+}

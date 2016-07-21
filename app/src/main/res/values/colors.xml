@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_team">#9afe2e</color>
+    <color name="orange_team">#ff8800</color>
+    <color name="link_text">#777777</color>
+</resources>
